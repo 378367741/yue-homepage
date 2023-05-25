@@ -23,7 +23,7 @@ import Mouse from "./page/Mouse.vue";
   height: 100vh;
   /*放在最下层*/
   z-index: -1;
-  background-image: url("src/assets/background.png");
+  background-image: url("../public/assets/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
