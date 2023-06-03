@@ -1,7 +1,7 @@
 <script setup>
-import { reactive, toRefs } from 'vue'
+import { onMounted, reactive, toRefs } from 'vue'
 import { ref } from 'vue'
-
+import RightPage from './RightPage.vue';
 
 const state = reactive({
     circleUrl:
@@ -42,20 +42,27 @@ const socialLinks = ref([
 </script>
 
 <template>
-    <div id="homePage" style="position: relative; top: -100px;">
-        <el-avatar :size="120" :src="circleUrl" class="img" />
-        <h1>{{ $t('homePage.title') }}</h1>
-        <div class="line-container">
-            <hr class="line" />
-        </div>
-        <p>这里是一个小辣鸡做的个人主页</p>
+   
+    <div style="display: flex;flex-direction: row;">
+        <div id="homePage" style="position: relative; top: -100px;">
+            <el-avatar :size="120" :src="circleUrl" class="img" />
+            <h1>{{ $t('homePage.title') }}</h1>
+            <div class="line-container">
+                <hr class="line" />
+            </div>
+            <p>这里是一个小辣鸡做的个人主页</p>
 
-        <div class="radius" style="text-align: left;">
-            <a v-for="link in socialLinks" :key="link.url" :href="link.url" target="_blank">
-                <img :src="link.icon" alt="Social Icon" />
-            </a>
+            <div class="radius" style="text-align: left;">
+                <a v-for="link in socialLinks" :key="link.url" :href="link.url" target="_blank">
+                    <img :src="link.icon" alt="Social Icon" />
+                </a>
+            </div>
         </div>
-
+        <div class="rightPage">
+            <div class="time">
+                <RightPage />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -100,5 +107,11 @@ p {
 .radius a img {
     height: 80%;
     margin: 2%;
+}
+
+.rightPage {
+    display: flex;
+    flex-direction: row;
+    
 }
 </style>

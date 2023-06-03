@@ -6,9 +6,10 @@ import Mouse from "./page/Mouse.vue";
 </script>
 
 <template>
-  <div class="background" />
+  <div class="background"></div>
   <Mouse></Mouse>
   <router-view />
+  <router-view name="right"></router-view>
   <div class="animechara">
     <div class="chara"></div>
   </div>

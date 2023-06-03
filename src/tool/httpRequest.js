@@ -1,30 +1,35 @@
 //axios
 import axios from 'axios';
-import {setHistoryDetail, setHistoryList, setRole, setToken} from "./operateLocalStorage.js";
 
 const config =
-    {
-        "Url": "https://xxx.xxx.xxx",
-        "Test": "/api/test",
-    }
-
-//示例调用Get方法
-export function GetTest() {
-    GetHelp(config.Url + config.Test, (data) => {
-        console.log(data);
-    }, (error) => {
-        console.log(error);
-    });
+{
+    "AWord": "https://v1.hitokoto.cn"
 }
 
-//示例调用Post方法
-export function PostTest() {
-    PostHelp(config.Url + config.Test, {}, (data) => {
-        console.log(data);
-    }, (error) => {
-        console.log(error);
-    });
+//Get调用一言接口
+export function getAWord(ok,err=null){
+    GetHelp(config.AWord,(data) => {
+        ok(data.hitokoto)
+    },err);
 }
+
+// //示例调用Get方法
+// export function GetTest() {
+//     GetHelp(config.Url + config.Test, (data) => {
+//         console.log(data);
+//     }, (error) => {
+//         console.log(error);
+//     });
+// }
+
+// //示例调用Post方法
+// export function PostTest() {
+//     PostHelp(config.Url + config.Test, {}, (data) => {
+//         console.log(data);
+//     }, (error) => {
+//         console.log(error);
+//     });
+// }
 
 //Get请求
 export async function GetHelp(url, ok, err, token = '') {
