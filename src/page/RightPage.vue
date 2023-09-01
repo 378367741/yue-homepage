@@ -36,17 +36,29 @@ function updateDate() {
          <p class="date">{{ currentDate }}</p>
          <p class="time">{{ currentTime }}</p>
       </div>
+   <div class="website">
+      图标加文字
+   </div>
+   <div id="box1"></div>
+   <div id="box2"></div>
+   <div id="box3"></div>
+   <div id="box4"></div>
+   <div id="box5"></div>
+   <div id="box6"></div>     
    </div>
 </template>
 
 <style scoped>
+
 .right {
-   display: flex;
-   flex-direction: row;
+   width: 600px;
+   height: 200px;
+  
 }
 
 .time-container {
-   display: flex;
+   float: right;
+   
    justify-content: center;
    align-items: center;
    height: 200px;
@@ -59,6 +71,8 @@ function updateDate() {
    flex-direction: column;
    margin-left: 70px;
    margin-top: -130px;
+   border-radius: 50%;
+   position: relative;
 }
 
 .time-container .time {
@@ -66,6 +80,9 @@ function updateDate() {
    font-weight: bold;
    color: #333;
    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+   position: absolute;
+   top: 80px;
+   left: 50px;
 }
 
 .time-container .date {
@@ -73,11 +90,14 @@ function updateDate() {
    font-weight: bold;
    color: #333;
    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+   position: absolute;
+   top: 30px;
+   left: 50px;
 }
 
 .aWord-container {
    text-align: center;
-   display: flex;
+   float: left;
    justify-content: center;
    align-items: center;
    height: 200px;
@@ -90,11 +110,62 @@ function updateDate() {
    flex-direction: column;
    margin-left: 70px;
    margin-top: -130px;
+   border-radius: 50%;
+   position: relative;
 }
 
 .aWord {
    font-size: 20px;
    font-weight: bold;
+   position: absolute;
+   top: 50px;
+}
+.website {
+   background-color: rgba(255, 255, 255, 0.4);
+   width: 100px;
+   height: 40px;
+   clear: both;
+   float: left;
+   margin-top: 20px;
+   margin-left: 20px;
+}
+
+#box1{
+   height: 200px;
+   width: 200px;
+   background-color:  rgba(255, 255, 255, 0.4);
+   clear: both;
+   float: left;
+}
+#box2{
+   height: 200px;
+   width: 200px;
+   background-color: rgba(255, 255, 255, 0.4);
+   float: left;
+}
+#box3{
+   height: 200px;
+   width: 200px;
+   background-color:  rgba(255, 255, 255, 0.4);
+   float: left;
+}
+#box4{
+   height: 200px;
+   width: 200px;
+   background-color:  rgba(255, 255, 255, 0.4);
+   float: left;
+}
+#box5{
+   height: 200px;
+   width: 200px;
+   background-color: rgba(255, 255, 255, 0.4);
+   float: left;
+}
+#box6{
+   height: 200px;
+   width: 200px;
+   background-color:  rgba(255, 255, 255, 0.4);
+   float: left;
 }
 </style>
  
